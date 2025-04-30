@@ -7,6 +7,7 @@ A sleek, responsive, and real-time weather widget built with React and styled us
 🌎 Supports location-based weather updates.<br>
 🎨 Clean, modern design with Material-UI.<br>
 📱 Fully responsive across devices.<br><br>
+
 ⚙️ **Tech Stack**<br>
 Frontend: React.js<br>
 Styling: Material-UI<br>
