@@ -4,8 +4,7 @@ import InfoBox from './InfoBox';
 const NewsHeadlines = ({ info }) => {
     const [headlines, setHeadlines] = useState([]);
     const [error, setError] = useState(null);
-    const apiUrl = 'https://saurav.tech/NewsAPI/top-headlines/category/health/in.json'; // No API key needed
-
+    const apiUrl = 'https://newsapi.org/v2/top-headlines?country=in&apiKey=fc824988005048848f13488a3f295a72';
     useEffect(() => {
         const fetchHeadlines = async () => {
             try {
