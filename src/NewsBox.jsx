@@ -4,7 +4,7 @@ import InfoBox from './InfoBox';
 const NewsHeadlines = ({ info }) => {
     const [headlines, setHeadlines] = useState([]);
     const [error, setError] = useState(null);
-    const apiUrl = 'https://newsapi.org/v2/top-headlines?country=in&apiKey=fc824988005048848f13488a3f295a72';
+    const apiUrl = 'https://newsdata.io/api/1/archive?apikey=pub_8472551a224531ddec41cc8d04fe45aa3cd29&q=example&language=en&from_date=2023-01-19&to_date=2023-01-25';
     useEffect(() => {
         const fetchHeadlines = async () => {
             try {
