@@ -1,5 +1,3 @@
-import TextField from '@mui/material/TextField';
-import "./SearchBox.css";
 import React, { useState } from 'react';
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
@@ -11,8 +9,8 @@ export default function SearchBox({ updateInfo, updateNews }) {
     let [error, setError] = useState(false);
     const WEATHER_API_URL = "https://api.openweathermap.org/data/2.5/weather";
     const WEATHER_API_KEY = "bd5e378503939ddaee76f12ad7a97608";
-    const NEWS_API_URL = "https://newsapi.org/v2/everything";
-    const NEWS_API_KEY = "fc824988005048848f13488a3f295a72"; // You'll need to get a free API key from newsapi.org
+    const BASE_URL = "https://saurav.tech/NewsAPI/";
+    const top_headlines_api = `${BASE_URL}/top-headlines/category/general/in.json`;  // Example category and country
 
     const getWeatherInfo = async () => {
         try {
@@ -36,7 +34,7 @@ export default function SearchBox({ updateInfo, updateNews }) {
 
     const getNewsInfo = async () => {
         try {
-            const response = await axios.get(`${NEWS_API_URL}?q=${city}&apiKey=${NEWS_API_KEY}&pageSize=5&sortBy=publishedAt`);
+            const response = await axios.get(top_headlines_api);  // Fetching from updated API
             return response.data.articles.map(article => ({
                 title: article.title,
                 description: article.description,
