@@ -1,0 +1,126 @@
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px rgba(107, 91, 125, 0.12);
+  padding: 1.5rem;
+}
+
+.current-weather-card {
+  margin-bottom: 1.5rem;
+}
+
+.current-weather-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.current-weather-location-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.current-weather-location {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #6B5B7D;
+  margin: 0;
+}
+
+.current-weather-save-star {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(248, 246, 252, 0.9);
+  border: 1px solid rgba(139, 111, 168, 0.3);
+  border-radius: 12px;
+  color: #8B7A9B;
+  font-size: 1.35rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.current-weather-save-star:hover {
+  border-color: rgba(139, 111, 168, 0.5);
+  color: #8B6FA8;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.current-weather-save-star.active {
+  border-color: rgba(139, 111, 168, 0.5);
+  color: #8B6FA8;
+}
+
+.current-weather-time {
+  font-size: 0.95rem;
+  color: #8B7A9B;
+}
+
+.current-weather-main {
+  margin-bottom: 1.25rem;
+}
+
+.current-weather-temp-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.current-weather-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.current-weather-temp {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #5A4A6A;
+}
+
+.current-weather-desc {
+  font-size: 1rem;
+  color: #8B7A9B;
+  margin: 0.25rem 0 0 0;
+  text-transform: capitalize;
+}
+
+.current-weather-feels {
+  font-size: 0.95rem;
+  color: #8B7A9B;
+  margin: 0.5rem 0 0 0;
+}
+
+.current-weather-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+}
+
+.current-weather-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.current-weather-detail .label {
+  font-size: 0.8rem;
+  color: #8B7A9B;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.current-weather-detail .value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #5A4A6A;
+}

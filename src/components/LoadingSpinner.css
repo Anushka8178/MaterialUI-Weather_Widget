@@ -1,0 +1,41 @@
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    min-height: 120px;
+    width: 100%;
+    position: relative;
+    z-index: 3;
+}
+
+.spinner {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+.spinner-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 4px solid transparent;
+    border-top-color: #8B6FA8;
+    border-radius: 50%;
+}
+
+.spinner-ring:nth-child(2) {
+    border-top-color: #9B8FA8;
+    width: 70%;
+    height: 70%;
+    top: 15%;
+    left: 15%;
+}
+
+.loading-text {
+    color: #6B5B7D;
+    font-size: 1.1rem;
+    font-weight: 500;
+}

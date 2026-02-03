@@ -1,0 +1,33 @@
+.chart-container {
+    margin-top: 2rem;
+    width: 100%;
+    padding: 1.5rem;
+    background: rgba(248, 246, 252, 0.8) !important;
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(139, 111, 168, 0.15);
+    box-shadow: 0 2px 12px rgba(107, 91, 125, 0.08);
+}
+
+.chart-title {
+    color: #6B5B7D !important;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.chart-wrapper {
+    height: 300px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .chart-container {
+        padding: 1rem;
+    }
+    
+    .chart-wrapper {
+        height: 250px;
+    }
+}

@@ -1,0 +1,60 @@
+.aqi-card {
+  margin-bottom: 1.5rem;
+}
+
+.aqi-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #6B5B7D;
+  margin: 0 0 0.75rem 0;
+}
+
+.aqi-value-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.aqi-value {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.aqi-label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.aqi-desc {
+  font-size: 0.9rem;
+  color: #8B7A9B;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.aqi-good .aqi-value,
+.aqi-good .aqi-label {
+  color: #2e7d32;
+}
+
+.aqi-fair .aqi-value,
+.aqi-fair .aqi-label {
+  color: #558b2f;
+}
+
+.aqi-moderate .aqi-value,
+.aqi-moderate .aqi-label {
+  color: #f9a825;
+}
+
+.aqi-poor .aqi-value,
+.aqi-poor .aqi-label {
+  color: #ef6c00;
+}
+
+.aqi-very-poor .aqi-value,
+.aqi-very-poor .aqi-label {
+  color: #c62828;
+}

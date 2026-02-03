@@ -1,67 +1,169 @@
-body {
-    margin: 0;
-    padding: 0;
+.app-container {
+    position: relative;
     min-height: 100vh;
-    background: #1a1f2e !important;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    overflow-x: hidden;
+    padding: 1.5rem 1rem 2rem;
+}
+
+.app-container.dark-theme {
+    background: linear-gradient(135deg, #1a1f2e 0%, #2a3f5f 100%);
+    color: #fff;
+}
+
+.app-container.light-theme {
+    background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+    color: #1e293b;
 }
 
 .header {
-    margin: 0;
+    margin: 0 0 0.5rem 0;
     font-weight: 700;
-    font-size: 2.8rem;
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
     text-align: center;
-    color: #c5bee2;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    letter-spacing: 1px;
+    color: #e8e6f0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.5px;
     width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.app-container.light-theme .header {
+    color: #3730a3;
+}
+
+.subtitle {
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    color: rgba(232, 230, 240, 0.9);
+    margin: 0.25rem 0 0 0;
+    font-weight: 400;
+}
+
+.app-container.light-theme .subtitle {
+    color: #4f46e5;
 }
 
 .container {
-    width: 90%;
-    max-width: 800px;
+    width: 100%;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 0.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    z-index: 2;
 }
 
 .weather-container {
-    background: rgba(96, 102, 199, 0.1);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: 24px;
     padding: 2.5rem;
     width: 100%;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease;
+    box-shadow: 0 8px 32px rgba(107, 91, 125, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.6);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 1rem;
+    align-items: stretch;
+    margin-top: 1.5rem;
+    position: relative;
+    z-index: 2;
 }
 
-.weather-container:hover {
-    transform: translateY(-5px);
+.weather-actions {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.location-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 14px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(139, 111, 168, 0.3);
+  color: #8B6FA8;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.location-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(139, 111, 168, 0.5);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(107, 91, 125, 0.15);
+}
+
+.location-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.weather-error {
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  background: rgba(201, 122, 143, 0.15);
+  border: 1px solid rgba(201, 122, 143, 0.3);
+  border-radius: 12px;
+  color: #C97A8F;
+  font-weight: 500;
+  text-align: center;
+}
+
+.weather-content {
+  width: 100%;
+}
+
+.weather-main {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.weather-main-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.weather-main-right {
+  position: sticky;
+  top: 1rem;
+}
+
+.weather-empty {
+  text-align: center;
+  color: #8B7A9B;
+  font-size: 1rem;
+  padding: 2rem;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .weather-main {
+    grid-template-columns: 1fr;
+  }
+  .weather-main-right {
+    position: static;
+  }
 }
 
 @media (max-width: 768px) {
-    .header {
-        font-size: 2.2rem;
-    }
-    
-    .weather-container {
-        padding: 1.5rem;
-        margin-top: 0.5rem;
-        border-radius: 20px;
-    }
+  .app-container {
+    padding: 1rem 0.75rem 1.5rem;
+  }
 
-    .container {
-        width: 95%;
-        margin: 0 auto;
-    }
+  .weather-container {
+    padding: 1.25rem;
+    border-radius: 16px;
+  }
+
+  .container {
+    padding: 0;
+  }
 }
